@@ -5,7 +5,7 @@ data = {
     'username': 'admin',
     'password': 'pass',
 }
-auth = ('q2bpM21XRSIDCnQQLgxl3Og6x64T2WylNKtqzlpd', '8c9oQUJW28xnAufsGdQWDnADOYnOTRmK7jnX8dINxhnvyofFI2YkAbTOihmNjUi71lz4LGGELDzpI9yzIjyXwasfEPgFa5bt82BAEualaBFSzEL3jIi04eB0eZMrcEyC')
+auth = ('v6mLpeV040t3NaasxdM30yBeYVaqeqRieamvPMah', '9DlALUa5jOfLPpzNjgXFFyzsC95NWafOQufrkPttVLRzTEzAO30tHoHpXTZQ7vmemWKbidxYHNRIO4GpcLd3R5dCSJYHt9DVGYXbkLfiM5DyIkYHDNrewaGNamkDz3ch')
 
 response = requests.post('http://localhost:8080/o/token/', data=data, auth=auth)
 

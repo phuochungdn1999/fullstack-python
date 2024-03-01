@@ -4,7 +4,6 @@ from django.contrib import admin
 urlpatterns = [
     path('', include('tutorials.urls')),
 ]
-from blog.handlers import grpc_handlers as blog_grpc_handlers
 from monitor.handlers import grpc_handlers as monitor_grpc_handlers
 
 
@@ -15,6 +14,5 @@ urlpatterns = [
 
 
 def grpc_handlers(server):
-    blog_grpc_handlers(server)
     monitor_grpc_handlers(server)
     

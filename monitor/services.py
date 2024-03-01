@@ -88,4 +88,4 @@ class CommandService(Service):
         return command_pb2.PredictResponse(lucky_number=lucky_number)
 
     def Logs(self, request, context):
-        return 'This is logs command'
+        return command_pb2.LogResponse(log='This is log')

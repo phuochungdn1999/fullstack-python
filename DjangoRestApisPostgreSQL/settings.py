@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'tutorials.apps.TutorialsConfig',
-    'blog',
     'corsheaders',
     'django_grpc_framework',
     'monitor',
@@ -85,10 +84,10 @@ WSGI_APPLICATION = 'DjangoRestApisPostgreSQL.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'testdb',
+        'NAME': 'test_db',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'postgres',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }

@@ -23,4 +23,3 @@ message PredictRequest {
 message LogRequest {
     int64 id = 1;
 }
-
