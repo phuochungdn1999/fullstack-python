@@ -1,20 +1,14 @@
 version: '0.1'
 services:
   grpc:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: python-grpc:1.15
+    image: phuochung2599/fullstack:latest
     command: ./entrypoint-grpc.sh
     ports:
       - 50051:50051
     depends_on:
       - postgres
   api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: python-grpc:1.15
+    image: phuochung2599/fullstack:latest
     command: ./entrypoint-api.sh
     ports:
       - 8080:8080
