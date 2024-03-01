@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package monitor;
+
+
+service CommandController {
+    rpc Predict(PredictRequest) returns (PredictResponse) {}
+    rpc Logs(LogRequest) returns (LogResponse) {}
+
+}
+
+message PredictResponse {
+    int32 lucky_number = 1;
+}
+
+message LogResponse {
+    string log = 1;
+}
+
+message PredictRequest {
+}
+
+message LogRequest {
+    int64 id = 1;
+}
+

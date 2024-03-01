@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package monitor;
+
+service UploadService {
+  rpc UploadFiles(UploadRequest) returns (UploadResponse);
+}
+
+message File {
+  string filename = 1;
+  bytes data = 2;
+}
+
+message UploadRequest {
+  repeated File files = 1;
+}
+
+message UploadResponse {
+  bool success = 1;
+}

@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package monitor;
+
+import "google/protobuf/empty.proto";
+
+service MonitorController {
+    rpc List(MonitorListRequest) returns (stream Monitor) {}
+    rpc Create(Monitor) returns (Monitor) {}
+    rpc Retrieve(MonitorRetrieveRequest) returns (Monitor) {}
+    rpc Update(Monitor) returns (Monitor) {}
+    rpc Destroy(Monitor) returns (google.protobuf.Empty) {}
+}
+
+message Monitor {
+    int64 id = 1;
+    string name = 2;
+    bool is_active = 3;
+    float cpu_utilization = 4;
+    float training_process = 5;
+    string error_log = 6;
+}
+
+message MonitorListRequest {
+}
+
+message MonitorRetrieveRequest {
+    int64 id = 1;
+}
+
+
